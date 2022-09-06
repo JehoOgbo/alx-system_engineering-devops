@@ -1,2 +1,2 @@
 #!/bin/bash
-set -- WHOAM="root" | echo "Hello $WHOAM"
+echo "Hello, $USER"
