@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Hello $WHOAMI"
+set -- WHOAM="root" | echo "Hello $WHOAM"
