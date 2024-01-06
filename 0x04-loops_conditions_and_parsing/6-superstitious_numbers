@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# This script prints the numbers from 1 to 20 and prints
+# "bad luck from China" after the number 4, "bad luck from Japan"
+# after the number 9 and "bad luck from Italy" after the number 17
+
+i=1
+while [ "$i" -ne 21 ]; do
+	echo "$i"
+	if [ "$i" -eq 4 ]
+	then
+		echo "bad luck from China"
+	elif [ "$i" -eq 9 ]
+	then
+		echo "bad luck from Japan"
+	elif [ "$i" -eq 17 ]
+	then
+		echo "bad luck from Italy"
+	fi
+	((i+=1))
+done
