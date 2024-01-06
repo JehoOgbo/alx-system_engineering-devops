@@ -2,7 +2,6 @@
 # This script gives information about the school file. If it
 #exists and some other properties if yes
 
-i=school
 if [ -f ./school ] || [ -d ./school ]
 then
 	echo "school file exists"
