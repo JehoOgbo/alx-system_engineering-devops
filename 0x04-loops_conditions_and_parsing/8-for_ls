@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script lists all the files in the current directory without the
+# first hyphen and other leading characters using a for loop
+LIST="$(ls .)"
+for i in $LIST; do
+	echo "$i" | cut -d '-' -f 2
+done
