@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# List 1 to 100. Write fizzbuzz for multiples of both 3 and 5
+# fizz for multiples of 3 and 5 for multiples of 5 alone
+number=1
+while [ "$number" -lt 101 ]; do
+	remainder1=$((number % 3))
+	remainder2=$((number % 5))
+	if [ "$remainder1" == 0 ] && [ "$remainder2" -eq 0 ]
+	then
+		echo "FizzBuzz"
+	elif [ "$remainder1" == 0 ]
+	then
+		echo "Fizz"
+	elif [ "$remainder2" == 0 ]
+	then
+		echo "Buzz"
+	else
+		echo "$number"
+	fi
+	((number+=1))
+done
