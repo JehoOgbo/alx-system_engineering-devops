@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script parses apache logs using the awk command.
+# Requirement: Loops are disallowed
+#awk '{print $10 " " $1 " " $9}' ./apache-access.log | sort | sort -r
+awk '{print $1,$9}' apache-access.log | sort | uniq -c | sort -r
