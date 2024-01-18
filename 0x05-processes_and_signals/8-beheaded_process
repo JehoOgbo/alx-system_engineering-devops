@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Don't stop me now
+
+pgrep -f 7-highlander | xargs kill -9
