@@ -1,2 +1,2 @@
 #!/usr/bin/env ruby
-puts ARGV[0].scan(^A\d\d\d\d\d\d\d\d\d\d\Z).join
+puts ARGV[0].scan(^A\d{10}\Z).join
