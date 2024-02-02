@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# change the ip address of some websites and save old copy
+cp /etc/hosts ~/hosts.new
+cp /etc/hosts /etc/hosts.old
+#sed '$ a \n'~/hosts.new
+#sed '$ a 127.0.0.2	localhost' ~/hosts.new
+#sed '$ a 8.8.8.8	facebook.com' ~/hosts.new
+#sed -i s/^172.*$// ~/hosts.new
+echo "" >> ~/hosts.new
+echo "127.0.0.2	localhost" >> ~/hosts.new
+#echo "8.8.8.8	facebook.com" >> ~/hosts.new
+cat ~/hosts.new
+echo "$(cat~/hosts.new)">/etc/hosts
