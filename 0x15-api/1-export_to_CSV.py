@@ -29,6 +29,6 @@ if __name__ == '__main__':
         my_list = [emp_id, emp_name, item['completed'], item['title']]
         new_list.append(my_list)
 
-    with open("2.csv", mode="w", encoding="utf-8") as file:
+    with open("{}.csv".format(emp_id), mode="w", encoding="utf-8") as file:
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         writer.writerows(new_list)
