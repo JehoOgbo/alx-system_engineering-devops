@@ -8,7 +8,6 @@ from sys import argv
 if __name__ == '__main__':
     emp_id = int(argv[1])
 
-
     response = get('https://jsonplaceholder.typicode.com/todos/')
     real = response.json()
 
@@ -19,7 +18,7 @@ if __name__ == '__main__':
     for item in real:
         if item['userId'] == emp_id:
             lister.append(item)
-            if item['completed'] == True:
+            if item['completed'] is True:
                 done_list.append(item)
                 t_don += 1
             t_totl += 1
