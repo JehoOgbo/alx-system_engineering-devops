@@ -12,11 +12,11 @@ def recurse(subreddit, hot_list=[], after="", count=0):
     params = {
         "after": after,
         "count": count,
-        "limit": 100
+        "limit": 1
     }
     response = requests.get(url, headers=headers, params=params,
                             allow_redirects=False)
-    if response.status_code == 404:
+    if response.status_code != 200:
         return None
 
     results = response.json().get("data")
